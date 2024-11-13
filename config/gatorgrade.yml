@@ -1,0 +1,109 @@
+# perform checks on a file
+
+- writing/proposal.md:
+    - description: Ensure that writing/proposal.md file exists
+      check: ConfirmFileExists
+    # - description: Write a minimum number of meaningful words in the proposal
+    #   check: CountFileWords
+    #   options:
+    #     count: 400
+    #     exact: false
+    - description: Complete all TODOs, remove the TODO markers in writing/proposal.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the writing/proposal.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Group Name Here' in the writing/proposal.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Group Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Project Title Here' in the writing/proposal.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Group Name Here"
+        count: 0
+        exact: true
+
+# check the technical writing for various characteristics
+- writing/reflection.md:
+    - description: Ensure that writing/reflection.md file exists
+      check: ConfirmFileExists
+    # - description: Write a minimum number of meaningful words in the reflection
+    #   check: CountFileWords
+    #   options:
+    #     count: 400
+    #     exact: false
+    - description: Complete all TODOs, remove the TODO markers in writing/reflection.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the writing/reflection.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Group Name Here' in the writing/reflection.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Group Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Project Title Here' in the writing/reflection.md file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Group Name Here"
+        count: 0
+        exact: true
+
+
+# check the technical writing for various characteristics
+- src/code.r:
+    - description: Ensure that src/code.r file exists
+      check: ConfirmFileExists
+    # - description: Write a minimum number of meaningful words in the proposal
+    #   check: CountFileWords
+    #   options:
+    #     count: 400
+    #     exact: false
+    - description: Complete all TODOs, remove the TODO markers in src/code.r
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the src/code.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Group Name Here' in the src/code.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Group Name Here"
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Project Title Here' in the src/code.r file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Group Name Here"
+        count: 0
+        exact: true
+
+# count number of commits in the GitHub repository
+- description: Have at least a specific minimum number of commits (5) in repository
+  check: CountCommits
+  options:
+    count: 5
